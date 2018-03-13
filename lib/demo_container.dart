@@ -12,15 +12,20 @@ class DemoContainer extends StatelessWidget {
         child: new Container(                 // 子部件
           width: 400.0,                           //宽
           height: 400.0,                          //高
-          color: Colors.blueGrey,
+          // color 与 decoration 互斥 .如需设置decoration 和 color , 可在decoration中设置color
+          // color: Colors.blueGrey,
           padding: const EdgeInsets.all(16.0),
           alignment: Alignment.center,
-          foregroundDecoration: new BoxDecoration(  // 前景装饰
-            image: new DecorationImage(
-                image: new NetworkImage(imgUrl)
-            )
+          decoration: new BoxDecoration(
+            color: Colors.blueGrey,
+            border: new Border.all(
+              color: Colors.blue,
+              width: 8.0,
+            ),
+            image: new DecorationImage(image: new NetworkImage(imgUrl),fit: BoxFit.none)
           ),
-          child: new Text('Halcyon',style: const TextStyle(color: Colors.purple,fontSize: 24.0),),
+//          transform: new Matrix4.rotationZ(0.2),
+          child: new Text('Halcyon',style: const TextStyle(color: Colors.blue,fontSize: 24.0),),
         )
 
     );
