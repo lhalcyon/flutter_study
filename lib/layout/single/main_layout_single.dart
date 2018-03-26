@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:vue_study/layout/demo_align.dart';
-import 'package:vue_study/layout/demo_aspect_ratio.dart';
-import 'package:vue_study/layout/demo_baseline.dart';
-import 'package:vue_study/layout/demo_constrainedbox.dart';
-import 'package:vue_study/layout/demo_container.dart';
-import 'package:vue_study/layout/demo_fittedbox.dart';
-import 'package:vue_study/layout/demo_fractionallysizedbox.dart';
-import 'package:vue_study/layout/demo_padding.dart';
+import 'package:vue_study/layout/single/demo_align.dart';
+import 'package:vue_study/layout/single/demo_aspect_ratio.dart';
+import 'package:vue_study/layout/single/demo_baseline.dart';
+import 'package:vue_study/layout/single/demo_constrainedbox.dart';
+import 'package:vue_study/layout/single/demo_container.dart';
+import 'package:vue_study/layout/single/demo_fittedbox.dart';
+import 'package:vue_study/layout/single/demo_fractionallysizedbox.dart';
+import 'package:vue_study/layout/single/demo_padding.dart';
 import 'package:vue_study/main.dart';
 import 'package:vue_study/multi/demo_row.dart';
 
@@ -87,9 +87,6 @@ class SingleLayoutState extends State<SingleLayoutPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: new AppBar(
-            title: new Text('Layout Demo')
-        ),
         body: _buildDemoPage()
     );
   }

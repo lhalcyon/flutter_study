@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vue_study/drawer/drawer.dart';
-import 'package:vue_study/layout/main_layout_single.dart';
+import 'package:vue_study/layout/single/main_layout_single.dart';
 
 void main() => runApp(new DemoApp());
 
