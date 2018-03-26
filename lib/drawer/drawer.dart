@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vue_study/layout/single/main_layout_single.dart';
 import 'package:vue_study/main.dart';
+import 'package:vue_study/route/routes.dart';
 
 
 class DemoDrawer extends StatelessWidget {
@@ -46,16 +47,17 @@ class DemoDrawer extends StatelessWidget {
     var widget = entry.widget;
 
     if (widget != null) {
-      Navigator.of(context).push(
-          new MaterialPageRoute(builder: (context) {
-            return new Scaffold(
-                appBar: new AppBar(
-                    title: new Text(entry.title)
-                ),
-                body: widget
-            );
-          })
-      );
+//      Navigator.of(context).push(
+//          new MaterialPageRoute(builder: (context) {
+//            return new Scaffold(
+//                appBar: new AppBar(
+//                    title: new Text(entry.title)
+//                ),
+//                body: widget
+//            );
+//          })
+//      );
+        Navigator.of(context).pushNamed(RoutePath.layoutMulti);
     }
   }
 }

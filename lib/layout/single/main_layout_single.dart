@@ -8,7 +8,6 @@ import 'package:vue_study/layout/single/demo_fittedbox.dart';
 import 'package:vue_study/layout/single/demo_fractionallysizedbox.dart';
 import 'package:vue_study/layout/single/demo_padding.dart';
 import 'package:vue_study/main.dart';
-import 'package:vue_study/multi/demo_row.dart';
 
 class MainLayoutSingle extends StatelessWidget{
 
@@ -41,7 +40,6 @@ class SingleLayoutState extends State<SingleLayoutPage> {
     new PageEntry('ConstrainedBox Demo', new DemoConstrainedBox()),
     new PageEntry('Baseline Demo', new DemoBaseline()),
     new PageEntry('FractionallySizedBox Demo', new DemoFractionallySizedBox()),
-    new PageEntry('Row Demo', new DemoRow()),
   ];
 
   Widget _buildDemoPage() {
