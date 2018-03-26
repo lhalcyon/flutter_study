@@ -22,14 +22,10 @@ class DemoDrawer extends StatelessWidget {
       ),
       const Divider(),
       new ListTile(
-        title: const Text('Layout Widget - Single Child'),
+        title: const Text('Layout - Single Child'),
         onTap: (){
-//          setState(){
-//            var page = new PageEntry('Layout Widget - Single Child', new MainLayoutSingle());
-//            _pushPage(context,page);
-//          }
           Navigator.of(context).pop(); // Dismiss the drawer.
-          _pushPage(context,new PageEntry('Layout Widget - Single Child', new MainLayoutSingle()));
+          _pushPage(context,new PageEntry('Layout - Single Child', new MainLayoutSingle()));
 
         }
       ),
@@ -60,7 +56,6 @@ class DemoDrawer extends StatelessWidget {
             );
           })
       );
-      print('push');
     }
   }
 }
