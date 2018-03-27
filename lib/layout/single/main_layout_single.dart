@@ -14,7 +14,12 @@ class MainLayoutSingle extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return new SingleLayoutPage();
+    return new Scaffold(
+      appBar: new AppBar(
+        title: const Text('Layout Widget - Single'),
+      ),
+      body: new SingleLayoutPage(),
+    );
   }
 }
 
