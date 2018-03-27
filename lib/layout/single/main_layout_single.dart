@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vue_study/layout/single/demo_align.dart';
 import 'package:vue_study/layout/single/demo_aspect_ratio.dart';
 import 'package:vue_study/layout/single/demo_baseline.dart';
+import 'package:vue_study/layout/single/demo_center.dart';
 import 'package:vue_study/layout/single/demo_constrainedbox.dart';
 import 'package:vue_study/layout/single/demo_container.dart';
 import 'package:vue_study/layout/single/demo_fittedbox.dart';
@@ -36,12 +37,12 @@ class SingleLayoutState extends State<SingleLayoutPage> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   final _demoPageList = <PageEntry>[
-    new PageEntry('Container Demo', new DemoContainer()),
+    new PageEntry('Container Demo(重要)', new DemoContainer()),
     new PageEntry('Padding Demo', new DemoPadding()),
-    new PageEntry('Center Demo', null),
+    new PageEntry('Center Demo(重要)', new DemoCenter()),
     new PageEntry('Align Demo', new DemoAlign()),
     new PageEntry('FittedBox Demo', new DemoFittedBox()),
-    new PageEntry('AspectRatio Demo', new DemoAspectRatio()),
+    new PageEntry('AspectRatio Demo(重要)', new DemoAspectRatio()),
     new PageEntry('ConstrainedBox Demo', new DemoConstrainedBox()),
     new PageEntry('Baseline Demo', new DemoBaseline()),
     new PageEntry('FractionallySizedBox Demo', new DemoFractionallySizedBox()),

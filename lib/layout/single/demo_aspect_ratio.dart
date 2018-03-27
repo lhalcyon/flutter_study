@@ -9,7 +9,7 @@ class DemoAspectRatio extends StatelessWidget {
       color: Colors.blueGrey,
       alignment: Alignment.center,
       child: new AspectRatio(
-          aspectRatio: 1.0 / 1.0,
+          aspectRatio: 3.0 / 1.0,  //    ratio = 宽 / 高 ,
           child: new Container(
             color: Colors.purple,
           ),)
