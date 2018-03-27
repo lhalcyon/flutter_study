@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vue_study/layout/single/demo_Intrinsic_height.dart';
 import 'package:vue_study/layout/single/demo_align.dart';
 import 'package:vue_study/layout/single/demo_aspect_ratio.dart';
 import 'package:vue_study/layout/single/demo_baseline.dart';
@@ -37,15 +38,16 @@ class SingleLayoutState extends State<SingleLayoutPage> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   final _demoPageList = <PageEntry>[
-    new PageEntry('Container Demo(重要)', new DemoContainer()),
-    new PageEntry('Padding Demo', new DemoPadding()),
-    new PageEntry('Center Demo(重要)', new DemoCenter()),
-    new PageEntry('Align Demo', new DemoAlign()),
-    new PageEntry('FittedBox Demo', new DemoFittedBox()),
-    new PageEntry('AspectRatio Demo(重要)', new DemoAspectRatio()),
-    new PageEntry('ConstrainedBox Demo', new DemoConstrainedBox()),
-    new PageEntry('Baseline Demo', new DemoBaseline()),
-    new PageEntry('FractionallySizedBox Demo', new DemoFractionallySizedBox()),
+    new PageEntry('Container Demo(重要)', new DemoContainer(),"container"),
+    new PageEntry('Padding Demo', new DemoPadding(),null),
+    new PageEntry('Center Demo(重要)', new DemoCenter(),null),
+    new PageEntry('Align Demo', new DemoAlign(),null),
+    new PageEntry('FittedBox Demo', new DemoFittedBox(),null),
+    new PageEntry('AspectRatio Demo(重要)', new DemoAspectRatio(),null),
+    new PageEntry('ConstrainedBox Demo', new DemoConstrainedBox(),null),
+    new PageEntry('Baseline Demo', new DemoBaseline(),null),
+    new PageEntry('FractionallySizedBox Demo', new DemoFractionallySizedBox(),null),
+    new PageEntry('IntrinsicHeight Demo', new DemoIntrinsicHeight(),null),
   ];
 
   Widget _buildDemoPage() {
@@ -78,7 +80,10 @@ class SingleLayoutState extends State<SingleLayoutPage> {
           new MaterialPageRoute(builder: (context) {
             return new Scaffold(
                 appBar: new AppBar(
-                    title: new Text(demo.title)
+                    title: new Text(demo.title),
+                    actions: <Widget>[
+//                      demo.desc != null ? new IconButton(icon: new Icon(Icons.message,color: Colors.white,), onPressed: _showMessage(context,demo.desc)) : new Text('')
+                    ],
                 ),
                 body: widget
             );
@@ -87,6 +92,24 @@ class SingleLayoutState extends State<SingleLayoutPage> {
     }
   }
 
+  _showMessage(BuildContext context, String desc) {
+    showModalBottomSheet<Null>(context: context, builder: (BuildContext context) {
+      return new Container(
+          child: new Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: new Text('This is the modal bottom sheet. Click anywhere to dismiss.',
+                  textAlign: TextAlign.center,
+                  style: new TextStyle(
+                      color: Theme.of(context).accentColor,
+                      fontSize: 24.0
+                  )
+              )
+          )
+      );
+    });
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -94,4 +117,8 @@ class SingleLayoutState extends State<SingleLayoutPage> {
         body: _buildDemoPage()
     );
   }
+
+
+
+
 }

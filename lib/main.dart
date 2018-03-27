@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:vue_study/drawer/drawer.dart';
 import 'package:vue_study/layout/multi/main_layout_multi.dart';
 import 'package:vue_study/layout/single/main_layout_single.dart';
 import 'package:vue_study/route/routes.dart';
+import 'package:vue_study/text/demo_text.dart';
 
 void main() => runApp(new DemoApp());
 
@@ -16,6 +16,7 @@ class DemoApp extends StatelessWidget {
       home: new DemoMain(),
       routes: <String, WidgetBuilder>{
         RoutePath.home: (BuildContext context) => new HomePage(),
+        RoutePath.text: (BuildContext context) => new DemoText(),
         RoutePath.layoutSingle: (BuildContext context) => new MainLayoutSingle(),
         RoutePath.layoutMulti: (BuildContext context) => new MainLayoutMulti()
       },
@@ -33,6 +34,8 @@ class DemoMain extends StatefulWidget {
 }
 
 class DemoMainState extends State<DemoMain> {
+
+  final _biggerFont = const TextStyle(fontSize: 18.0);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +59,15 @@ class DemoMainState extends State<DemoMain> {
               ),
             ),
             new ListTile(
-                title: const Text('Layout - Single Child'),
+                title: new Text('Widget - Text',style: _biggerFont ),
+                onTap: () {
+                  Navigator.of(context).pop(); // Dismiss the drawer.
+                  _pushPage(context, new RouteEntry(
+                      'Widget - Text', RoutePath.text));
+                }
+            ),
+            new ListTile(
+                title: new Text('Layout - Single Child',style: _biggerFont ),
                 onTap: () {
                   Navigator.of(context).pop(); // Dismiss the drawer.
                   _pushPage(context, new RouteEntry(
@@ -65,7 +76,7 @@ class DemoMainState extends State<DemoMain> {
             ),
             const Divider(),
             new ListTile(
-                title: const Text('Layout - Multi Child'),
+                title: new Text('Layout - Multi Child' , style: _biggerFont,),
                 onTap: () {
                   Navigator.of(context).pop(); // Dismiss the drawer.
                   _pushPage(context, new RouteEntry(
@@ -93,9 +104,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      child: const Text('home'),
+      child: const Text('Flutter Study Demos'),
       alignment: Alignment.center,
     );
+  }
+
+  void _openDrawer() {
+
   }
 }
 
@@ -116,5 +131,9 @@ class PageEntry {
 
   Widget widget;
 
-  PageEntry(this.title, this.widget);
+  String desc;
+
+  PageEntry(this.title, this.widget, this.desc);
+
+
 }
