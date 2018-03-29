@@ -8,6 +8,8 @@ class RoutePath {
 
   static final String text = "/text";
 
+  static final String image = "/image";
+
   static final String layoutSingle = "/layout/single";
 
   static final String layoutMulti = "/layout/multi";

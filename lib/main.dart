@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vue_study/image/demo_image.dart';
 import 'package:vue_study/layout/multi/main_layout_multi.dart';
 import 'package:vue_study/layout/single/main_layout_single.dart';
 import 'package:vue_study/route/routes.dart';
@@ -16,6 +17,7 @@ class DemoApp extends StatelessWidget {
       home: new DemoMain(),
       routes: <String, WidgetBuilder>{
         RoutePath.home: (BuildContext context) => new HomePage(),
+        RoutePath.image: (BuildContext context) => new DemoImage(),
         RoutePath.text: (BuildContext context) => new DemoText(),
         RoutePath.layoutSingle: (BuildContext context) => new MainLayoutSingle(),
         RoutePath.layoutMulti: (BuildContext context) => new MainLayoutMulti()
@@ -64,6 +66,14 @@ class DemoMainState extends State<DemoMain> {
                   Navigator.of(context).pop(); // Dismiss the drawer.
                   _pushPage(context, new RouteEntry(
                       'Widget - Text', RoutePath.text));
+                }
+            ),
+            new ListTile(
+                title: new Text('Widget - Image' , style: _biggerFont,),
+                onTap: () {
+                  Navigator.of(context).pop(); // Dismiss the drawer.
+                  _pushPage(context, new RouteEntry(
+                      'Widget - Image', RoutePath.image));
                 }
             ),
             new ListTile(
