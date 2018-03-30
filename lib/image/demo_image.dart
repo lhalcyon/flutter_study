@@ -7,8 +7,7 @@ class DemoImage extends StatelessWidget {
   Widget build(BuildContext context) {
     var title = 'Demo Image';
     var imgUrl = 'https://ws1.sinaimg.cn/large/006tNc79gy1fpa5bvsqskj3044048mx5.jpg';
-    var assetsImg = 'lib/resources/images/gender.png';
-
+    var assetsImg = 'resources/images/ic_link.png';
 
     return new Scaffold(
         appBar: new AppBar(
