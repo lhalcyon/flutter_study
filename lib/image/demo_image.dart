@@ -9,7 +9,7 @@ class DemoImage extends StatelessWidget {
   Widget build(BuildContext context) {
     var title = 'Demo Image';
     var imgUrl = 'https://ws1.sinaimg.cn/large/006tNc79gy1fpa5bvsqskj3044048mx5.jpg';
-    var imageAssets = 'resources/images/ic_link.png';
+    var imageAssets = 'assets/images/ic_link.png';
 
     return new Scaffold(
         appBar: new AppBar(
@@ -37,7 +37,7 @@ class DemoImage extends StatelessWidget {
                 child: new Card(
                   child: new Row(
                     children: <Widget>[
-                      const Text('image.network:'),
+                      const Text('Image.network:'),
                       new Image.network(
                         imgUrl,
                         width: 150.0,
@@ -47,21 +47,6 @@ class DemoImage extends StatelessWidget {
                   ),
                 )
             ),
-//            new Padding(
-//                padding: const EdgeInsets.all(16.0),
-//                child: new Card(
-//                  child: new Row(
-//                    children: <Widget>[
-//                      const Text('image.file:'),
-//                      new Image.file(
-//                        new File('resources/images/tab_n.png'),
-//                        width: 150.0,
-//                        height: 150.0,
-//                      )
-//                    ],
-//                  ),
-//                )
-//            ),
             new Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: new Card(
@@ -75,6 +60,36 @@ class DemoImage extends StatelessWidget {
                         height: 150.0,
                         fadeInDuration: const Duration(milliseconds: 1200),
                         fadeOutDuration: const Duration(milliseconds: 1200),
+                      )
+                    ],
+                  ),
+                )
+            ),
+            new Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: new Card(
+                  child: new Row(
+                    children: <Widget>[
+                      const Text('ImageProvider Asset:'),
+                      new Image(
+                        image: new AssetImage(imageAssets),
+                        width: 150.0,
+                        height: 150.0,
+                      )
+                    ],
+                  ),
+                )
+            ),
+            new Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: new Card(
+                  child: new Row(
+                    children: <Widget>[
+                      const Text('ImageProvider Network:'),
+                      new Image(
+                        image: new NetworkImage(imgUrl),
+                        width: 150.0,
+                        height: 150.0,
                       )
                     ],
                   ),
