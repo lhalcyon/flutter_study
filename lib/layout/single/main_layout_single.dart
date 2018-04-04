@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:vue_study/layout/single/demo_Intrinsic_height.dart';
-import 'package:vue_study/layout/single/demo_align.dart';
-import 'package:vue_study/layout/single/demo_aspect_ratio.dart';
-import 'package:vue_study/layout/single/demo_baseline.dart';
-import 'package:vue_study/layout/single/demo_center.dart';
-import 'package:vue_study/layout/single/demo_constrainedbox.dart';
-import 'package:vue_study/layout/single/demo_container.dart';
-import 'package:vue_study/layout/single/demo_fittedbox.dart';
-import 'package:vue_study/layout/single/demo_fractionallysizedbox.dart';
-import 'package:vue_study/layout/single/demo_padding.dart';
-import 'package:vue_study/main.dart';
+import 'package:flutter_study/layout/single/demo_Intrinsic_height.dart';
+import 'package:flutter_study/layout/single/demo_align.dart';
+import 'package:flutter_study/layout/single/demo_aspect_ratio.dart';
+import 'package:flutter_study/layout/single/demo_baseline.dart';
+import 'package:flutter_study/layout/single/demo_center.dart';
+import 'package:flutter_study/layout/single/demo_constrainedbox.dart';
+import 'package:flutter_study/layout/single/demo_container.dart';
+import 'package:flutter_study/layout/single/demo_fittedbox.dart';
+import 'package:flutter_study/layout/single/demo_fractionallysizedbox.dart';
+import 'package:flutter_study/layout/single/demo_padding.dart';
+import 'package:flutter_study/main.dart';
 
 class MainLayoutSingle extends StatelessWidget{
 

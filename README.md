@@ -1,4 +1,4 @@
-# vue_study
+# flutter_study
 
 A new Flutter project.
 

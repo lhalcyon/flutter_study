@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:vue_study/image/demo_image.dart';
-import 'package:vue_study/layout/multi/main_layout_multi.dart';
-import 'package:vue_study/layout/single/main_layout_single.dart';
-import 'package:vue_study/route/routes.dart';
-import 'package:vue_study/text/demo_text.dart';
+import 'package:flutter_study/image/demo_image.dart';
+import 'package:flutter_study/layout/multi/main_layout_multi.dart';
+import 'package:flutter_study/layout/single/main_layout_single.dart';
+import 'package:flutter_study/route/routes.dart';
+import 'package:flutter_study/text/demo_text.dart';
 
 void main() => runApp(new DemoApp());
 
