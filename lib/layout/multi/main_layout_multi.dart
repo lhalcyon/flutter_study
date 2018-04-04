@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/layout/multi/demo_column.dart';
 import 'package:flutter_study/layout/multi/demo_row.dart';
 import 'package:flutter_study/main.dart';
 
@@ -28,7 +29,8 @@ class MultiLayoutState extends State<MultiLayoutPage> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   final _demoPageList = <PageEntry>[
-    new PageEntry('Container Demo(重要)', new DemoRow(),null),
+    new PageEntry('Row Demo(重要)', new DemoRow(),null),
+    new PageEntry('Column Demo(重要)', new DemoColumn(),null),
 
 
   ];
