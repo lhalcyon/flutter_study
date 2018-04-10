@@ -6,9 +6,15 @@ import 'package:flutter_study/layout/single/demo_baseline.dart';
 import 'package:flutter_study/layout/single/demo_center.dart';
 import 'package:flutter_study/layout/single/demo_constrainedbox.dart';
 import 'package:flutter_study/layout/single/demo_container.dart';
+import 'package:flutter_study/layout/single/demo_customsinglechildlayout.dart';
 import 'package:flutter_study/layout/single/demo_fittedbox.dart';
 import 'package:flutter_study/layout/single/demo_fractionallysizedbox.dart';
+import 'package:flutter_study/layout/single/demo_offstage.dart';
+import 'package:flutter_study/layout/single/demo_overflowbox.dart';
 import 'package:flutter_study/layout/single/demo_padding.dart';
+import 'package:flutter_study/layout/single/demo_sizedbox.dart';
+import 'package:flutter_study/layout/single/demo_sizedoverflowbox.dart';
+import 'package:flutter_study/layout/single/demo_transform.dart';
 import 'package:flutter_study/main.dart';
 
 class MainLayoutSingle extends StatelessWidget{
@@ -48,6 +54,13 @@ class SingleLayoutState extends State<SingleLayoutPage> {
     new PageEntry('Baseline Demo', new DemoBaseline(),null),
     new PageEntry('FractionallySizedBox Demo', new DemoFractionallySizedBox(),null),
     new PageEntry('IntrinsicHeight Demo', new DemoIntrinsicHeight(),null),
+    new PageEntry('IntrinsicWidth Demo', new DemoIntrinsicHeight(),null),
+    new PageEntry('OffState Demo', new DemoOffStage(),null),
+    new PageEntry('OverflowBox Demo', new DemoOverflowBox(),null),
+    new PageEntry('SizedBox Demo', new DemoSizedBox(),null),
+    new PageEntry('SizedOverflowBox Demo', new DemoSizedOverflowBox(),null),
+    new PageEntry('Transform Demo', new DemoTransform(),null),
+    new PageEntry('CustomSingleChildLayout Demo', new DemoCustomSingleChildLayout(),null),
   ];
 
   Widget _buildDemoPage() {
